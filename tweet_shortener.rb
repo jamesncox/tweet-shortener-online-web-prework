@@ -1,4 +1,4 @@
-
+require 'pry'
 def dictionary
   dictionary = {
     "hello" => "hi",
@@ -18,6 +18,7 @@ def word_substituter(tweet)
   tweet.split.collect do |word|
     if dictionary.keys.include?(word.downcase)
       word = dictionary[word.downcase]
+      binding.pry
     else
       word
     end
